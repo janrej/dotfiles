@@ -581,7 +581,7 @@ in
   
     # The state version is required and should stay at the version you
     # originally installed.
-    home.stateVersion = "25.05";
+    home.stateVersion = "25.11";
   };
 
 
@@ -639,7 +639,7 @@ in
   services.dnsmasq.settings = {
     bind-interfaces = true;
   };
-  
+
   boot.extraModprobeConfig = "options kvm_intel nested=1";
 
   programs.virt-manager.enable = true;
