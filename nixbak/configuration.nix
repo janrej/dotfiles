@@ -630,15 +630,25 @@ in
   services.devmon.enable = true;
 
   # Virtualisation
-  boot.extraModprobeConfig = "options kvm_intel nested=1";
+
+
+  networking.firewall.interfaces.virbr0.allowedTCPPorts = [ 53 ];
+  networking.firewall.interfaces.virbr0.allowedUDPPorts = [ 53 67 ];
 
   services.dnsmasq.enable = true;
+  services.dnsmasq.settings = {
+    bind-interfaces = true;
+  };
+  
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
+
   programs.virt-manager.enable = true;
   
   virtualisation = {
     libvirtd = {
       enable = true;
       qemu = {
+        runAsRoot = true;
         swtpm.enable = true;
         ovmf = {
           enable = true;
