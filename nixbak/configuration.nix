@@ -112,6 +112,7 @@ in
 
           # See https://wiki.hyprland.org/Configuring/Monitors/
           monitor = eDP-1,highres,auto,1
+          monitor = Virtual-1,highres,auto,1
 
 
           ###################
