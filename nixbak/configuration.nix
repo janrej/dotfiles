@@ -112,7 +112,7 @@ in
 
           # See https://wiki.hyprland.org/Configuring/Monitors/
           monitor = eDP-1,highres,auto,1
-          monitor = Virtual-1,highres,auto,1
+          monitor = Virtual-1,1920x1080,auto,1
 
 
           ###################
@@ -135,8 +135,8 @@ in
           # Or execute your favorite apps at launch like this:
 
           # exec-once = 
-          exec-once = conky &
-          exec-once = hyprpaper &
+          # exec-once = conky &
+          # exec-once = hyprpaper &
 
 
           #############################
@@ -254,7 +254,7 @@ in
           # https://wiki.hyprland.org/Configuring/Variables/#misc
           misc {
               force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
-              disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+              disable_hyprland_logo = false # If true disables the random hyprland logo / anime girl background. :(
               vfr = true
           }
 
